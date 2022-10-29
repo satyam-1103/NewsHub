@@ -3,7 +3,6 @@ import React, { Component } from "react";
 import Loading from "./Loading";
 import NewsItem from "./NewsItem";
 import PropTypes from "prop-types";
-const API_KEY = import.meta.env.VITE_NEWS_API_KEY;
 export class News extends Component {
   constructor(props) {
     super(props);
@@ -21,7 +20,9 @@ export class News extends Component {
     window.scrollTo(0, 0); //scrolls to top on rendering.
     let url = `https://newsapi.org/v2/top-headlines?country=${
       this.props.country
-    }&category=${this.props.category}&apiKey=${API_KEY}&page=${
+    }&category=${
+      this.props.category
+    }&apiKey=1695077e262341c4bd72621ec85b3bf3&page=${
       this.state.pg + 1
     }&pageSize=${this.props.pageSize}`;
     this.setState({ loading: true });
@@ -37,7 +38,9 @@ export class News extends Component {
     window.scrollTo(0, 0);
     let url = `https://newsapi.org/v2/top-headlines?country=${
       this.props.country
-    }&category=${this.props.category}&apiKey=${API_KEY}&page=${
+    }&category=${
+      this.props.category
+    }&apiKey=1695077e262341c4bd72621ec85b3bf3&page=${
       this.state.pg - 1
     }&pageSize=${this.props.pageSize}`;
     this.setState({ loading: true });
@@ -121,7 +124,7 @@ export class News extends Component {
   //didMount
   async componentDidMount() {
     window.scrollTo(0, 0);
-    const url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=${API_KEY}&page=1&pageSize=${this.props.pageSize}`;
+    const url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=1695077e262341c4bd72621ec85b3bf3&page=1&pageSize=${this.props.pageSize}`;
     this.setState({ loading: true });
     let data = await fetch(url);
     let parsedData = await data.json();
