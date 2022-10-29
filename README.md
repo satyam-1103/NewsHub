@@ -10,6 +10,10 @@ NewsHub is a news application which uses NewsAPI for fetching latest news.
 
 - Satyam Srivastava [@satyam-1103](https://www.github.com/satyam-1103)
 
+## Deployment
+
+* This project cannot be deployed because it uses API KEYS.
+
 
 ## Run Locally
 Clone the project
