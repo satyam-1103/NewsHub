@@ -71,9 +71,9 @@ export class News extends Component {
           <div className="row">
             {/* news items mapping */}
             {!this.state.loading &&
-              this.state.?articles.map((items, id) => {
+              this.state?.articles.map((items, id) => {
                 return (
-                  <div className="col-md-4 col-sm-6 col-xs-12" key={items.url}>
+                  <div className="col-md-4 col-sm-6 col-xs-12" key={items.id}>
                     <NewsItem
                       title={
                         (items.title ? items.title.slice(0, 45) : "") + ".."
