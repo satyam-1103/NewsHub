@@ -1,4 +1,4 @@
-// 1695077e262341c4bd72621ec85b3bf3
+
 import React, { Component } from "react";
 import Loading from "./Loading";
 import NewsItem from "./NewsItem";
@@ -22,7 +22,7 @@ export class News extends Component {
       this.props.country
     }&category=${
       this.props.category
-    }&apiKey=1695077e262341c4bd72621ec85b3bf3&page=${
+    }&apiKey={process.env.REACT_APP_NEWS_API}&page=${
       this.state.pg + 1
     }&pageSize=${this.props.pageSize}`;
     this.setState({ loading: true });
